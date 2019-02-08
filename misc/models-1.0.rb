@@ -10,15 +10,21 @@ belongs_to: Games
 Games
   name: text
   pin: integer
-  instance_id: integer
-  response_id: integer
-  player_id: integer
+  # instance_id: integer
+  # response_id: integer
+  # player_id: integer
 
 has_many: Instances
 has_many: Responses
 has_many: Players
 
 ##############
+
+Deck
+  game_id: integer
+  card_id: integer
+
+################
 
 Instances
   card: text
@@ -52,4 +58,4 @@ Status
   response_id: integer
   player_id: integer
 
-belongs_to: Games
+Rounds
