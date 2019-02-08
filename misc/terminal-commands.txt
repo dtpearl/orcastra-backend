@@ -1,0 +1,274 @@
+Last login: Fri Feb  8 07:35:44 on ttys000
+
+Gespr:~ akexinad$ cd
+
+Gespr:~ akexinad$ cd Desktop/
+
+Gespr:Desktop akexinad$ mkdir github-branching
+
+Gespr:Desktop akexinad$ cd github-branching/
+
+Gespr:github-branching akexinad$ mkdir terminal-notes.txt
+
+Gespr:github-branching akexinad$ atom .
+
+Gespr:github-branching akexinad$ touch README.md
+
+Gespr:github-branching akexinad$ git init
+Initialized empty Git repository in /Users/akexinad/Desktop/github-branching/.git/
+
+Gespr:github-branching akexinad$ git add README.md
+
+Gespr:github-branching akexinad$ git commit -m 'first commit, readme'
+[master (root-commit) 827ef7d] first commit, readme
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+Gespr:github-branching akexinad$ git log
+commit 827ef7d6ef10e8355dddc9cb8eeee431d9c0b844 (HEAD -> master)
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:27:25 2019 +1100
+
+    first commit, readme
+
+Gespr:github-branching akexinad$ ls -l
+total 0
+-rw-r--r--  1 akexinad  staff   0  8 Feb 10:26 README.md
+drwxr-xr-x  2 akexinad  staff  64  8 Feb 10:26 terminal-notes.txt
+
+Gespr:github-branching akexinad$ open .
+
+Gespr:github-branching akexinad$ git checkout -b pets
+Switched to a new branch 'pets'
+
+Gespr:github-branching akexinad$ git status
+On branch pets
+nothing to commit, working tree clean
+
+Gespr:github-branching akexinad$ git branch
+  master
+* pets
+
+Gespr:github-branching akexinad$ touch cats
+
+Gespr:github-branching akexinad$ touch dogs
+
+Gespr:github-branching akexinad$ touch iguanas
+
+Gespr:github-branching akexinad$ open .
+
+Gespr:github-branching akexinad$ git add .
+
+Gespr:github-branching akexinad$ git commit -m 'added some pets'
+[pets 6cf445c] added some pets
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cats
+ create mode 100644 dogs
+ create mode 100644 iguanas
+
+Gespr:github-branching akexinad$ git log
+commit 6cf445cb863a8a994b29ef4e1eb8ebc63ded1ac5 (HEAD -> pets)
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:31:05 2019 +1100
+
+    added some pets
+
+commit 827ef7d6ef10e8355dddc9cb8eeee431d9c0b844 (master)
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:27:25 2019 +1100
+
+    first commit, readme
+
+Gespr:github-branching akexinad$ git checkout master
+Switched to branch 'master'
+
+Gespr:github-branching akexinad$ git branch
+* master
+  pets
+
+Gespr:github-branching akexinad$ git checkout pets
+Switched to branch 'pets'
+
+Gespr:github-branching akexinad$ git checkout master
+Switched to branch 'master'
+
+Gespr:github-branching akexinad$ git checkout pets
+Switched to branch 'pets'
+
+Gespr:github-branching akexinad$ git checkout master
+Switched to branch 'master'
+
+Gespr:github-branching akexinad$ git branch -D pets
+Deleted branch pets (was 6cf445c).
+
+Gespr:github-branching akexinad$ git checkout -b comics
+Switched to a new branch 'comics'
+
+Gespr:github-branching akexinad$ touch judge_dredd
+
+Gespr:github-branching akexinad$ touch batman
+
+Gespr:github-branching akexinad$ touch swampman
+
+Gespr:github-branching akexinad$ touch deadpool
+
+Gespr:github-branching akexinad$ git log
+commit 827ef7d6ef10e8355dddc9cb8eeee431d9c0b844 (HEAD -> comics, master)
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:27:25 2019 +1100
+
+    first commit, readme
+
+Gespr:github-branching akexinad$ git add .
+
+Gespr:github-branching akexinad$ git commit -m 'comic titles'
+[comics 7bd34b0] comic titles
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 batman
+ create mode 100644 deadpool
+ create mode 100644 judge_dredd
+ create mode 100644 swampman
+
+Gespr:github-branching akexinad$ git log
+commit 7bd34b072d0fd412fe6a8a0e0fe39469b5ddc3f0 (HEAD -> comics)
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:35:23 2019 +1100
+
+    comic titles
+
+commit 827ef7d6ef10e8355dddc9cb8eeee431d9c0b844 (master)
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:27:25 2019 +1100
+
+    first commit, readme
+
+Gespr:github-branching akexinad$ git status
+On branch comics
+nothing to commit, working tree clean
+
+Gespr:github-branching akexinad$ git checkout master
+Switched to branch 'master'
+
+Gespr:github-branching akexinad$ git checkout comics
+Switched to branch 'comics'
+
+Gespr:github-branching akexinad$ git checkout master
+Switched to branch 'master'
+
+Gespr:github-branching akexinad$ git merge comics
+Updating 827ef7d..7bd34b0
+Fast-forward
+ batman      | 0
+ deadpool    | 0
+ judge_dredd | 0
+ swampman    | 0
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 batman
+ create mode 100644 deadpool
+ create mode 100644 judge_dredd
+ create mode 100644 swampman
+
+Gespr:github-branching akexinad$ git log
+commit 7bd34b072d0fd412fe6a8a0e0fe39469b5ddc3f0 (HEAD -> master, comics)
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:35:23 2019 +1100
+
+    comic titles
+
+commit 827ef7d6ef10e8355dddc9cb8eeee431d9c0b844
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:27:25 2019 +1100
+
+    first commit, readme
+
+Gespr:github-branching akexinad$ git branch
+  comics
+* master
+
+Gespr:github-branching akexinad$ git branch -D comics
+Deleted branch comics (was 7bd34b0).
+
+Gespr:github-branching akexinad$ git status
+On branch master
+nothing to commit, working tree clean
+
+Gespr:github-branching akexinad$ git branch
+* master
+
+Gespr:github-branching akexinad$ ls
+README.md	batman		deadpool	judge_dredd	swampman
+
+Gespr:github-branching akexinad$ git checkout -b cleanup
+Switched to a new branch 'cleanup'
+
+Gespr:github-branching akexinad$ git rm batman
+rm 'batman'
+
+Gespr:github-branching akexinad$ git status
+On branch cleanup
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    batman
+
+
+Gespr:github-branching akexinad$ git commit -m 'deleted batman'
+[cleanup 5244dd5] deleted batman
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 batman
+
+Gespr:github-branching akexinad$ git status
+On branch cleanup
+nothing to commit, working tree clean
+
+Gespr:github-branching akexinad$ git checkout master
+Switched to branch 'master'
+
+Gespr:github-branching akexinad$ git log
+commit 7bd34b072d0fd412fe6a8a0e0fe39469b5ddc3f0 (HEAD -> master)
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:35:23 2019 +1100
+
+    comic titles
+
+commit 827ef7d6ef10e8355dddc9cb8eeee431d9c0b844
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:27:25 2019 +1100
+
+    first commit, readme
+
+Gespr:github-branching akexinad$ git checout cleanup
+git: 'checout' is not a git command. See 'git --help'.
+
+The most similar command is
+	checkout
+
+Gespr:github-branching akexinad$ git status
+On branch master
+nothing to commit, working tree clean
+
+Gespr:github-branching akexinad$ git log
+commit 7bd34b072d0fd412fe6a8a0e0fe39469b5ddc3f0 (HEAD -> master)
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:35:23 2019 +1100
+
+    comic titles
+
+commit 827ef7d6ef10e8355dddc9cb8eeee431d9c0b844
+Author: danny <danixeka@gmail.com>
+Date:   Fri Feb 8 10:27:25 2019 +1100
+
+    first commit, readme
+
+Gespr:github-branching akexinad$ git branch
+  cleanup
+* master
+
+Gespr:github-branching akexinad$ git checkout master
+Already on 'master'
+
+Gespr:github-branching akexinad$ git branch -D cleanup
+Deleted branch cleanup (was 5244dd5).
+
+Gespr:github-branching akexinad$ git branch
+* master
