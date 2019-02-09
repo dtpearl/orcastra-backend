@@ -1,0 +1,26 @@
+
+
+<h2>Decks</h2>
+  <% @decks.each do |deck| %>
+
+    <ul>
+        <li><%= deck[:name] %></li>
+        <li><%= deck[:sfw] %></li>
+    </ul>
+  <% end %>
+
+<h2>Instance</h2>
+  <% @instances.each do |i| %>
+
+    <ul>
+        <li><%= i[:card] %></li>
+    </ul>
+  <% end %>
+
+<h2>Responses</h2>
+  <% @responses.each do |r| %>
+
+    <ul>
+        <li><%= r[:card] %></li>
+    </ul>
+  <% end %>
