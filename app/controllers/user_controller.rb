@@ -13,13 +13,14 @@ class UserController < ApplicationController
   end
 
   def create
-    @user = User.create post_params
+    @user = User.create user_params
 
   #  redirect_to @user
   end
 
   private
-    def post_params
+  # Update these params to reflect user params
+    def user_params
       params.require(:post).permit(:post_text, :post_image, :likes, :user_id)
     end
 
