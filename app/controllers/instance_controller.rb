@@ -1,0 +1,3 @@
+class InstanceController < ApplicationController
+
+end
