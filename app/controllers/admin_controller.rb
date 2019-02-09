@@ -6,7 +6,7 @@ class AdminController < ApplicationController
     @instances = Instance.all
     @responses = Response.all
 
-    game_data = { :flight => flight, :plane => plane, :reservations => reservations }
+    game_data = { :decks => @decks, :instances => @instances, :responses => @responses }
 
     respond_to do |format|
             format.html
