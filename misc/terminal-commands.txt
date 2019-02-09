@@ -1,14 +1,6 @@
 Last login: Fri Feb  8 07:35:44 on ttys000
 
-Gespr:~ akexinad$ cd
-
-Gespr:~ akexinad$ cd Desktop/
-
-Gespr:Desktop akexinad$ mkdir github-branching
-
-Gespr:Desktop akexinad$ cd github-branching/
-
-Gespr:github-branching akexinad$ mkdir terminal-notes.txt
+Gespr:github-branching akexinad$ mkdir terminal-notes
 
 Gespr:github-branching akexinad$ atom .
 
