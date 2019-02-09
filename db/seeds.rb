@@ -8,26 +8,31 @@
 
 # BASE SET #######################################
 
-base_json = File.read("base.json")
+Deck.destroy_all
+Instance.destroy_all
+Response.destroy_all
+
+base_json = File.read("./cah/base.json")
 base_deck = JSON.parse(base_json)
 base_instances = base_deck["blackCards"]
 base_responses = base_deck["whiteCards"]
 
-d1 = Deck.create :name => "Base Set"
+
+d1 = Deck.create(:name => "Base Set")
 
 base_instances.each do |instance|
   if instance["pick"] == 1
-    Instance.create :card => instance["text"], :deck_id => d1.id
+    Instance.create(:card => instance["text"], :deck_id => d1.id)
   end
 end
 
 base_responses.each do |response|
-  Response.create :card => response, :deck_id => d1.id
+  Response.create(:card => response, :deck_id => d1.id)
 end
 
 # FIRST EXPANSION ###################################
 
-first_exp_json = File.read("first_exp.json")
+first_exp_json = File.read("./cah/first_exp.json")
 first_exp_deck = JSON.parse(first_exp_json)
 first_exp_instances = first_exp_deck["blackCards"]
 first_exp_responses = first_exp_deck["whiteCards"]
@@ -46,7 +51,7 @@ end
 
 # SECOND EXPANSION ####################################
 
-second_exp_json = File.read("second_exp.json")
+second_exp_json = File.read("./cah/second_exp.json")
 second_exp_deck = JSON.parse(second_exp_json)
 second_exp_instances = second_exp_deck["blackCards"]
 second_exp_responses = second_exp_deck["whiteCards"]
@@ -65,12 +70,12 @@ end
 
 # HACKERS ################################################
 
-hackers_json = File.read("hackers.json")
+hackers_json = File.read("./cah/hackers.json")
 hackers_deck = JSON.parse(hackers_json)
 hackers_instances = hackers_deck["blackCards"]
 hackers_responses = hackers_deck["whiteCards"]
 
-d4 = Deck.create :name => "Hackers Expansions"
+d4 = Deck.create :name => "Hackers Expansion"
 
 hackers_instances.each do |instance|
   if instance["pick"] == 1
