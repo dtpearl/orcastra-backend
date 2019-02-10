@@ -1,4 +1,4 @@
-class InstanceController < ApplicationController
+class InstancesController < ApplicationController
 
   def index
     @instances = Instance.all
@@ -16,6 +16,10 @@ class InstanceController < ApplicationController
     @instance = Instance.create instance_params
 
   #  redirect_to @user
+  end
+
+  def edit_multiple_instances
+    
   end
 
   private
