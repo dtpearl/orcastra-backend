@@ -9,9 +9,9 @@ class AdminController < ApplicationController
     game_data = { :decks => @decks, :instances => @instances, :responses => @responses }
 
     respond_to do |format|
-            format.html
-            format.json { render json:game_data}
-        end
+      format.html
+      format.json { render json:game_data}
+    end
   end
 
 end
