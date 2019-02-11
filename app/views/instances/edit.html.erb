@@ -11,7 +11,7 @@
       <%= select :deck_id, nil, :value => i.deck_id %>
 
       <label for="sfw">SFW</label>
-
+      <%= select :sfw, nil, [['SFW', true], ['NSFW', false]] %>
 
       <button>Update card</button>
   </div>
