@@ -1,1 +1,11 @@
 
+<h2>Instances</h2>
+
+  <h3>params: <%= params[:id] %></h3>
+  <% @instances.each do |i| %>
+
+    <ul>
+        <li><%= i[:card] %></li>
+        <l1><%= i[:deck_id] %></l1>
+    </ul>
+  <% end %>

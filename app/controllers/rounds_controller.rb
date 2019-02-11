@@ -26,7 +26,11 @@ class RoundsController < ApplicationController
   private
   # Update these params to reflect user params
     def round_params
+<<<<<<< HEAD
       params.require(:post).permit(:game_id, :number, :likes, :instance_id, :winner_id, :master_id, :winning_card_id)
+=======
+      params.require(:round).permit(:game_id, :master_id, :number)
+>>>>>>> f4582b67300556040ce8dc89c99c954b52c052fa
     end
 
 

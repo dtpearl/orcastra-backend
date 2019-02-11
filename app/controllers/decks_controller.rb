@@ -11,6 +11,15 @@ class DecksController < ApplicationController
   # GET /decks/1.json
   def show
     # json for decks/:id
+    @instances = Instance.where(deck_id: params[:id])
+    @responses = Response.where(deck_id: params[:id])
+
+    whole_deck = {:instances => @instances, :responses => @responses}
+
+    respond_to do |format|
+      format.html
+      format.json { render json:whole_deck}
+    end
   end
 
   # GET /decks/new
