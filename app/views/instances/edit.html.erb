@@ -8,7 +8,7 @@
       <input type="text" name="card" value="<%=i.card %>" required>
 
       <label for="deck_id">Deck</label>
-      <%= select :deck_id, Deck.pluck(:name, :id), :include_blank => true %>
+      <%= select :deck_id, nil, Deck.pluck(:name, :id), :include_blank => true %>
 
       <button>Update card</button>
   </div>

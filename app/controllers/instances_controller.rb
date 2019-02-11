@@ -18,8 +18,12 @@ class InstancesController < ApplicationController
   #  redirect_to @user
   end
 
-  def edit_multiple_instances
-    
+  def edit
+    @instances = Instance.all
+  end
+
+  def update_multiple_instances
+    # Handle editing of multiple instances
   end
 
   private
