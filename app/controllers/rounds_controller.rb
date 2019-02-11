@@ -2,6 +2,11 @@ class RoundsController < ApplicationController
 
   def index
     @rounds = Round.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json:@rounds}
+    end
   end
 
   def show

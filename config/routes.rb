@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :games
   resources :users
   resources :decks
+  resources :rounds
   #resources :instances
 
   get '/admin' => 'admin#index'
