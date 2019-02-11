@@ -1,4 +1,4 @@
-class BurnController < ApplicationController
+class BurnsController < ApplicationController
 
 # create
 def create

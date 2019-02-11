@@ -1,4 +1,4 @@
-class RoundController < ApplicationController
+class RoundsController < ApplicationController
 
   def index
     @rounds = Round.all
