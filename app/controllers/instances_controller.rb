@@ -19,7 +19,7 @@ class InstancesController < ApplicationController
   end
 
   def edit
-    @instances = Instance.all
+    @instances = Instance.where(sfw: nil)
   end
 
   def update_multiple_instances
