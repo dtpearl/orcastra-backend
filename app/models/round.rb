@@ -1,4 +1,4 @@
 class Round < ApplicationRecord
-  belongs_to :game
-  belongs_to :instance
+  belongs_to :game, optional: true
+  belongs_to :instance, optional: true
 end

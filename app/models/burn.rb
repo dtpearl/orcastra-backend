@@ -1,5 +1,5 @@
 class Burn < ApplicationRecord
-  belongs_to :game
-  belongs_to :response
-  belongs_to :user
+  belongs_to :game, optional: true
+  belongs_to :response, optional: true
+  belongs_to :user, optional: true
 end

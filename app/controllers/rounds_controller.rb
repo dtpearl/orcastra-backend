@@ -70,6 +70,6 @@ class RoundsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def round_params
-      params.require(:round).permit(:game_id, :master_id)
+      params.require(:round).permit(:game_id, :master_id, :number)
     end
 end
