@@ -13,8 +13,8 @@ class DecksController < ApplicationController
     # json for decks/:id
     @instances = Instance.where(deck_id: params[:id])
     @responses = Response.where(deck_id: params[:id])
-
-    whole_deck = {:instances => @instances, :responses => @responses}
+    @deck = Deck.find params[:id]
+    whole_deck = {:deck => @deck, :instances => @instances, :responses => @responses}
 
     respond_to do |format|
       format.html
