@@ -18,7 +18,7 @@ base_instances = base_deck["blackCards"]
 base_responses = base_deck["whiteCards"]
 
 
-d1 = Deck.create(:name => "Base Set"
+d1 = Deck.create :name => "Base Set"
 
 base_instances.each do |instance|
   if instance["pick"] == 1
