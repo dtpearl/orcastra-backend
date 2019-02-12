@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :decks
   resources :rounds
+  resources :burns
   #resources :instances
 
   get '/admin' => 'admin#index'
