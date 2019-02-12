@@ -18,6 +18,16 @@ class ResponsesController < ApplicationController
   #  redirect_to @user
   end
 
+  def edit
+    @response = Response.find params[:id]
+  end
+
+  def update
+    response = Response.find params[:id]
+    response.sfw = params[:sfw]
+    redirect_to root_path
+  end
+
   private
   # Update these params to reflect user params
     def response_params

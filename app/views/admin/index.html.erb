@@ -13,7 +13,7 @@
   <% @instances.each do |i| %>
 
     <ul>
-        <li><%= i[:card] %></li>
+        <li><%= link_to i[:card], edit_path(i) %></li>
     </ul>
   <% end %>
 
@@ -21,6 +21,6 @@
   <% @responses.each do |r| %>
 
     <ul>
-        <li><%= r[:card] %></li>
+        <li><%= link_to r[:card], edit_response_path(r) %></li>
     </ul>
   <% end %>

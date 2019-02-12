@@ -19,11 +19,13 @@ class InstancesController < ApplicationController
   end
 
   def edit
-    @instances = Instance.where(sfw: nil)
+    @instance = Instance.find params[:id]
   end
 
-  def update_multiple_instances
-    # Handle editing of multiple instances
+  def update
+    instance = Instance.find params[:id]
+    instance.sfw = params[:sfw]
+    redirect_to root_path
   end
 
   private
