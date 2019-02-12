@@ -14,7 +14,7 @@
 
     <ul>
         <li><%= link_to i[:card], edit_path(i) %></li>
-        <li><%= i.sfw ? "True" : "False" %></li>
+        <li> SFW: <%= i.sfw ? "True" : "False" %></li>
     </ul>
   <% end %>
 
@@ -23,6 +23,6 @@
 
     <ul>
         <li><%= link_to r[:card], edit_response_path(r) %></li>
-        <li> r.sfw</li>
+        <li> SFW: <%= r.sfw ? "True" : "False" %></li>
     </ul>
   <% end %>
