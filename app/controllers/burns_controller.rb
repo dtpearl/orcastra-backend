@@ -70,6 +70,6 @@ class BurnsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def burn_params
-      params.require(:burn).permit(:game_id, :response_id, :played, :user_id)
+      params.require(:burn).permit(:game_id, :response_id, :played, :user_id, :round_id)
     end
 end
