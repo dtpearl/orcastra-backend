@@ -25,6 +25,7 @@ class InstancesController < ApplicationController
   def update
     instance = Instance.find params[:id]
     instance.sfw = params[:sfw]
+    instance.save
     redirect_to root_path
   end
 

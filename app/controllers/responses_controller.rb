@@ -25,6 +25,7 @@ class ResponsesController < ApplicationController
   def update
     response = Response.find params[:id]
     response.sfw = params[:sfw]
+    response.save
     redirect_to root_path
   end
 
